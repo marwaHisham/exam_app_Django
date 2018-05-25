@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+<style>
+    .center {
+        text-align: center;
+        border: 3px solid green;
+    }
+
+    .q {
+        width: 1200px
+    }
+</style>
+
+<body>
+
+    <div class="center">
+        <p>Exam</p>
+    </div>
+    <div class="col-xs-12 col-sm-12 p-3 mb-2 bg-light text-dark">
+        <form action="/action_page.php"></form>
+        <br>
+        <div>
+            {% for object in s %}
+            <input type="text" class="form-control" name="question" placeholder="question"> <!--{{object }}-->
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optradio">
+                <input type="text" class="form-control" name="f_answer" placeholder="value one"><!-- {{object.f_answer}}-->
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optradio">
+                <input type="text" class="form-control" name="s_answer" placeholder="value two"><!-- {{object.s_answer}}-->
+            </label>
+        </div>
+        <div class="radio disabled">
+            <label>
+                <input type="radio" name="optradio" disabled>
+                <input type="text" class="form-control" name="r_answer" placeholder="value three"><!-- {{object.correct_answer}}-->
+            </label>
+        </div>
+        {% endfor %}
+</body>
+
+</html>

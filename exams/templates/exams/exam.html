@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="col-xs-9 col-sm-9">
+                <p class="h1">Exam</p>  
+                <form action="/action_page.php">
+                    <div class="form-group">
+                      <label > {% for object in questions %}</label>
+            {{ object.q_obj }}
+            <ul>
+                <li>
+                  <a href="#">  {{object.f_answer}}</a>
+                    </li>
+                    <li>
+                    <a href="#">{{object.s_answer}}</a>
+                     </li>
+                     <li>
+                     <a href="#"> {{object.correct_answer}}</a>
+                     </li>
+                </ul>
+            {% endfor %}
+            </div>    
+    </body>
+
+</html>

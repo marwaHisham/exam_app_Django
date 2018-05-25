@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="col-xs-9 col-sm-9">
+<form  action="create" method="get">
+   <div class="form-group">
+     <label >choose course</label>
+    
+     <select class="form-control" name="course">
+        {% for object in courses %}
+            <option>{{ object }}</option>
+            {% endfor %}
+     </select>
+    
+   </div>
+    <div class="form-group">
+      <label >Number Of Questions</label>
+      <input type="number" class="form-control" name="numq">
+    </div>
+    <div class="form-group">
+        <label >difficult</label>
+        <input type="number" class="form-control" name="diff">
+      </div>
+      <div class="form-group">
+        <label >simple</label>
+        <input type="number" class="form-control" name= "simple">
+      </div>
+      <div class="form-group">
+        <label >reminding</label>
+        <input type="number" class="form-control" name="remin" >
+      </div>
+      <div class="form-group">
+        <label >understanding</label>
+        <input type="number" class="form-control" name="understand" >
+      </div>
+      <div class="form-group">
+        <label >creativity</label>
+        <input type="number" class="form-control" name="creativity" >
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+</body>
+  </html>
